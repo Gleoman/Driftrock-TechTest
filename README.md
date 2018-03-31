@@ -22,6 +22,7 @@ bundle install
 
 The language used in this repo is Ruby and the following technologies were also employed:
 
+- httparty - parses JSON data
 - Rspec - testing framework
 - Simplecov - testing coverage
 - Rubocop - linter
@@ -43,7 +44,7 @@ _**User Story 2**_
 ```
 As a User
 So that I can see revenues from a customer
-I would like to see the total spend associated with their e-mail address 
+I would like to see the total spend associated with their e-mail address
 ```
 
 _**User Story 3**_
@@ -59,7 +60,7 @@ I would like to find the e-mail address associated with the most purchases
 The data concerning the shopping basket is featured in a public API hosted on the Heroku platform at the following address:
 
 ```
-https://driftrock-dev-test.herokuapp.com 
+https://driftrock-dev-test.herokuapp.com
 ```
 
 The API features two endpoints - i) user data (/users) and ii) purchase data (/purchases).  It outputs the data in JSON format.
@@ -88,7 +89,7 @@ This method calculates the total spend by one user, meeting User Story 2 through
 
 ```
 - takes an e-mail address as an argument to iterate over  the user data and identify the relevant data point
-- identifies the user_id from that data point 
+- identifies the user_id from that data point
 ```
 
 ###### user id/spend
@@ -113,20 +114,17 @@ This method identifies the user who has made the greatest number of purchases, m
 
 ```
 - takes the user_ids array as an argument and the purchases endpoint as another
-- creates a user_id=>spend hash 
+- creates a user_id=>spend hash
 - iterates over the user_ids array to either i) create a key=>value pair for a given user
  if one does not exist, or ii) add the spend of a purchase to the value of a user_id
-- sorts the resulting user_id=>spend hash to identify the user_id with the greatest spend 
+- sorts the resulting user_id=>spend hash to identify the user_id with the greatest spend
 ```
 
 ###### user_id/e-mail
 
 ```
 - takes the user_id identified above as an argument
-- iterates over the purchases endpoint to find the relevant user_id data point 
+- iterates over the purchases endpoint to find the relevant user_id data point
 - outputs the e-mail address associated with that data point
 
 ```
-
-
-
