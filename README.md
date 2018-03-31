@@ -74,8 +74,10 @@ This method identifies the item that has sold the most, meeting User Story 1 thr
 
 ```
 - creates an item=>sales hash
-- iterates over the API purchases data to either i) create a key=>value  pair for a given item\ if one does not exist, or ii) adds the purchase of an item to the value of the existing hash
-- outputs the item with the greatest number of sales from  the hash, which finally represents\ item=>total sales structure
+- iterates over the API purchases data to either i) create a key=>value  pair for a given item
+ if one does not exist, or ii) adds the purchase of an item to the value of the existing hash
+- outputs the item with the greatest number of sales from  the hash, which finally represents
+ item=>total sales structure
 ```
 
 #### **2. total_spend**
@@ -112,7 +114,8 @@ This method identifies the user who has made the greatest number of purchases, m
 ```
 - takes the user_ids array as an argument and the purchases endpoint as another
 - creates a user_id=>spend hash 
-- iterates over the user_ids array to either i) create a key=>value pair for a given user\ if one does not exist, or ii) add the spend of a purchase to the value of a user_id
+- iterates over the user_ids array to either i) create a key=>value pair for a given user
+ if one does not exist, or ii) add the spend of a purchase to the value of a user_id
 - sorts the resulting user_id=>spend hash to identify the user_id with the greatest spend 
 ```
 
